@@ -32,7 +32,7 @@ pipeline {
         }
         stage("Package"){
             steps {
-                sh "./gralew build"
+                sh "./gradlew build"
             }
         }
         stage("Docker build"){
