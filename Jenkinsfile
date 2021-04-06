@@ -30,5 +30,15 @@ pipeline {
                       -Dsonar.login=f4b2ea02a17c38ea29904878c5fb1b4655ef6e02"
             }
         }
+        stage("Package"){
+            steps {
+                sh "./gralew build"
+            }
+        }
+        stage("Docker build"){
+            steps {
+                sh "docker build -t richoy/calculator"
+            }
+        }
     }
 }
