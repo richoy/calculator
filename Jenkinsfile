@@ -42,7 +42,7 @@ pipeline {
         }
         stage("Docker push"){
             steps {
-                sh "docker push richoy/calculator ."
+                sh "docker push richoy/calculator"
             }
         }
     }
