@@ -37,7 +37,7 @@ pipeline {
         }
         stage("Docker build"){
             steps {
-                sh "docker build -t richoy/calculator"
+                sh "docker build -t richoy/calculator ."
             }
         }
     }
